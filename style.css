@@ -60,6 +60,11 @@ button {
     font-size: 1.5vw;
     border: 3px solid black ;
     font-family: 'Chewy', cursive;
+    box-shadow: inset 15px 15px 22px 0px rgba(250, 250, 250, 0.31);
+}
+
+button:active {
+    box-shadow: inset 5px 5px 15px 0px rgba(0, 0, 0, 0.41);
 }
 
 .bookshelf {

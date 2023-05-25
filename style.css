@@ -3,24 +3,29 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    background-color: #F4F4EA;
   }
-
-header {
-    background-image: url(images/2-removebg.png);
-}
 
 h1 {
     display: flex;
     justify-content: center;
     font-family: 'Chewy', cursive;
-    padding-top: 11vh;
+    padding-top: 10vh;
+    position: relative;
+    z-index: 2;
+    font-size: 5vw;
+    margin-bottom: 1vh;
 }
 
-.headerbg {
+.headimg {
     position: absolute;
-    height: 40vh;
-    left: 40vw;
-}
+    left: 30vw;
+    width: 40vw;
+    height: 30vh;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 0;
+} 
 
 p {
     display: flex;
@@ -39,20 +44,22 @@ main {
     margin: 5vw 0vw 0vw 0vw;
     padding: 2vw 1vw 2vw 2vw;
     border-radius: 15px 15px 0px 0px;
-    font-size: 16pt;
+    font-size: 1.5vw;
     width: 3vw;
     writing-mode: vertical-rl;
+    font-family: 'Chewy', cursive;
 }
 
 button {
-    width: 10vh;
+    width: 10vw;
     height: 10vh;
     position: relative;
     left: 45vw;
-    border-radius: 200px;
+    border-radius: 300vw;
     background-color: #FC5658;
-    font-size: 14pt;
-    border: 1px solid black ;
+    font-size: 1.5vw;
+    border: 3px solid black ;
+    font-family: 'Chewy', cursive;
 }
 
 .bookshelf {

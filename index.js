@@ -39,15 +39,23 @@ function displayBooks() {
 
 displayBooks();
 
-let button = document.querySelector('button');
+let button = document.getElementsByClassName('addBook')[0];
 let header = document.querySelector('header');
+
+function handleCancel() {
+  const form = document.getElementsByClassName('bookform')[0];
+  form.parentNode.removeChild(form);
+
+  document.querySelector('.overlay').style.display = 'none';
+}
 
 function handleClick() {
   const div = document.createElement('div');
   header.appendChild(div);
   div.classList.add('bookform');
   div.innerHTML = `
-  <h1 class="formHeader">Add Your Book!</h1><br><br>
+  <h1 class="formHeader">Add Your Book!</h1><br>
+  <button class="cancel">x</button>
   <form>
     <label for="author">Author:</label><br><br>
     <input type="text" id="author"><br><br>
@@ -55,10 +63,13 @@ function handleClick() {
     <input type="text" id="title"><br><br>
     <label for="pages">Number of Pages:</label><br><br>
     <input type="number" id="pages"></input><br><br>
-    <input type="submit" value="submit">
+    <input type="submit" value="submit" class="submit">
   </form> 
 `;
   document.querySelector('.overlay').style.display = 'block';
+
+  let cancel = document.getElementsByClassName('cancel')[0];
+  cancel.addEventListener('click', handleCancel);
 }
 
 button.addEventListener('click', handleClick);

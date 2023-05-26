@@ -72,3 +72,46 @@ button:active {
     width: 100vw;
     background-color: #CA9A47;
 }
+
+.bookform {
+    background-color: white;
+    border-radius: 1vw;
+    border: 3px solid darkblue;
+    width: 20vw;
+    padding: 3vw;
+    position: absolute;
+    left: 37vw;
+    z-index: 2;
+    animation: slideDown 1s ease-out;
+    font-family: 'Chewy', cursive;
+    letter-spacing: 1pt;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+.formHeader {
+    font-size: 20pt;
+    padding: 0vw;
+    margin: 0px;
+    letter-spacing: 2pt;
+}

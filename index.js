@@ -25,6 +25,7 @@ function displayBooks() {
 
   myLibrary.forEach((book, index) => {
     const div = document.createElement('div');
+    main.appendChild(div);
     div.classList.add('bookCard');
 
     let bookText = `${book.title}<br>`;
@@ -33,9 +34,31 @@ function displayBooks() {
     div.innerHTML = bookText;
 
     div.style.backgroundColor = colors[index % colors.length];
-
-    main.appendChild(div);
   });
 }
 
 displayBooks();
+
+let button = document.querySelector('button');
+let header = document.querySelector('header');
+
+function handleClick() {
+  const div = document.createElement('div');
+  header.appendChild(div);
+  div.classList.add('bookform');
+  div.innerHTML = `
+  <h1 class="formHeader">Add Your Book!</h1><br><br>
+  <form>
+    <label for="author">Author:</label><br><br>
+    <input type="text" id="author"><br><br>
+    <label for="title">Title:</label><br><br>
+    <input type="text" id="title"><br><br>
+    <label for="pages">Number of Pages:</label><br><br>
+    <input type="number" id="pages"></input><br><br>
+    <input type="submit" value="submit">
+  </form> 
+`;
+  document.querySelector('.overlay').style.display = 'block';
+}
+
+button.addEventListener('click', handleClick);

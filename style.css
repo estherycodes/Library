@@ -80,7 +80,7 @@ main {
     background-color: white;
     border-radius: 1vw;
     border: 3px solid darkblue;
-    width: 20vw;
+    width: 25vw;
     padding: 2vw 2vw 2vw 2vw;
     position: absolute;
     left: 37vw;
@@ -91,7 +91,7 @@ main {
     letter-spacing: 1pt;
 }
 
-input {
+.text-box {
     border: 2px solid #E0E0E0;
     width: 15vw;
     height: 3vh;
@@ -99,12 +99,18 @@ input {
     background-color: #F0F0F0;
 }
 
+.check {
+    accent-color: #6C5CE7;
+    height: 2vh;
+    width: 2vw;
+}
+
 .submit {
     border-radius: 300px;
     background-color: #6C5CE7;
     color: white;
     height: 5vh;
-    width: 5vw;
+    min-width: 5vw;
     font-family: 'Chewy', cursive;
     font-size: 12pt;
     letter-spacing: 2px;

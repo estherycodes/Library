@@ -57,7 +57,7 @@ main {
 
 .bookCard .cancel{
     position: relative;
-    top: 0vh;
+    bottom: 0px;
     left: 4vw;
 }
 

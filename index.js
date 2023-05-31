@@ -63,6 +63,10 @@ function displayBooks() {
 
     div.appendChild(read);
     read.innerText = 'R';
+    read.addEventListener('click', () => {
+      book.read = !book.read;
+      div.style.backgroundColor = book.read ? colors[index % colors.length] : '#E0E0E0';
+    });
 
     // Add the book title and author to the div
     let bookText = `Book: ${book.title}<br>`;
@@ -70,7 +74,6 @@ function displayBooks() {
 
     div.innerHTML += bookText;
 
-    // Add the checkbox to the div
     if (book.read) {
       div.style.backgroundColor = colors[index % colors.length];
     } else {
